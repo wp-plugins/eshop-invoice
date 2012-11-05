@@ -14,7 +14,9 @@ td    { vertical-align: top; }
                 <b><font style='font-size:20pt'><?php if(isset($COPY)) {echo $COPY;} else {echo $invoice_options['status_'.$status.'_title'];} ?></font></b>
             </td>
             <td style="width: 50%; color: #444444;">
-            <img src="<?php echo $invoice_options['company_logo']; ?> alt='logo'">
+            <?php if $invoice_options['company_logo'] != "" { ?>
+                <img src="<?php echo $invoice_options['company_logo']; ?>" alt='logo'>
+            <?php } ?>
                 <h1><?php echo $invoice_options['company_name']; ?></h1>
                 <?php echo $invoice_options['invoice_emitter']; ?>
             </td>

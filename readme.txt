@@ -10,12 +10,12 @@ Requires at least: 3.0
 
 Tested up to: 3.4
 
-Stable tag: 0.1
+Stable tag: 0.2
 
 License: GPLv2 or later
 
 
-Invoice and Client interface plugin to the eshop (http://wordpress.org/extend/plugins/eshop/) plugin.
+Invoice and Client interface plugin to the "eShop for Wordpress" plugin.
 
 
 
@@ -23,7 +23,8 @@ Invoice and Client interface plugin to the eshop (http://wordpress.org/extend/pl
 
 
 
-This is a plugin to the eShop shopping cart plugin for WordPress. It includes:
+This is a plugin to the eShop shopping cart plugin for WordPress (http://wordpress.org/extend/plugins/eshop/). 
+It includes:
 
 
 * PDF invoices using the excellent html2pdf library (http://html2pdf.fr/)
@@ -49,9 +50,11 @@ Screenshots available on via [PyPHP.be](http://www.pyphp.be/)
 == Changelog == 
 
 
+Version 0.2
+* Corrected html error in the template, no image defined in Admin will not produce an error (was "File is not %PDF...blabla")
+* Removed dependency to eshop-users.php, useless to modify contact methods in this plugin.
 
 Version 0.1
-
 
 * *NEW* Initial release
 
