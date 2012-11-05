@@ -10,7 +10,7 @@ Requires at least: 3.0
 
 Tested up to: 3.4
 
-Stable tag: 0.2
+Stable tag: 0.3
 
 License: GPLv2 or later
 
@@ -29,7 +29,9 @@ It includes:
 
 * PDF invoices using the excellent html2pdf library (http://html2pdf.fr/)
 
-* Customers "My Order" view using a short code
+* Customers "My Orders" view using a short code
+
+* Widget for displaying a link to the "My Orders" page
 
 
 
@@ -50,8 +52,15 @@ Screenshots available on via [PyPHP.be](http://www.pyphp.be/)
 == Changelog == 
 
 
+Version 0.3
+
+* Added a My Order Widget (development motivated by Claes, thanks for the donation!)
+
+
 Version 0.2
+
 * Corrected html error in the template, no image defined in Admin will not produce an error (was "File is not %PDF...blabla")
+
 * Removed dependency to eshop-users.php, useless to modify contact methods in this plugin.
 
 Version 0.1
