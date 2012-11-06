@@ -10,7 +10,7 @@ Requires at least: 3.0
 
 Tested up to: 3.4
 
-Stable tag: 0.3.2
+Stable tag: 0.3.3
 
 License: GPLv2 or later
 
@@ -50,6 +50,10 @@ Screenshots available on via [PyPHP.be](http://www.pyphp.be/)
 
 
 == Changelog == 
+
+Version 0.3.3
+
+* Corrects template "default"
 
 Version 0.3.2
 
