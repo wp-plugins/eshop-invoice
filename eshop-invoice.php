@@ -3,7 +3,7 @@
 Plugin Name: eShop Invoice
 Plugin URI: http://www.pyphp.be/wordpress/eshop-invoice/
 Description: eShop Invoice is a plugin to the eShop Plugin by Rich Pedley (http://quirm.net/)
-Version: 0.3.1
+Version: 0.3.2
 Author: Thomas Lecocq
 Author URI: http://pyphp.be
 
@@ -36,10 +36,6 @@ add_action('admin_head-{$eshopinvoice}', 'embedUploaderCode');
 
 
 function embedUploaderCode() {
-wp_deregister_script('jquery');
-wp_register_script('jquery','http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js', false, '');
-wp_enqueue_script('jquery');
-
 ?>
     <script type="text/javascript">
     function send_to_editor(html){
