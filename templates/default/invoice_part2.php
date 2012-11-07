@@ -17,7 +17,7 @@
                 <div class="zone" style="height: 34mm;position: relative;font-size: 5mm;">
                     <div style="position: absolute; right: 3mm; bottom: 3mm; text-align: right; font-size: 4mm; ">
                         <b><?php echo $NUMBER;?></b> items<br>
-                        Price: <b><?php echo $value; ?>&euro;</b><br>
+                        Price: <b><?php echo $value; ?>  <?php echo $eshopoptions['currency_symbol']; ?></b><br>
                         Date: <b><?php echo $DATE; ?></b><br>
                         Order Number: <b><?php echo $TRANSID; ?></b><br>
                     </div>

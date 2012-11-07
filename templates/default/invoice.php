@@ -22,6 +22,7 @@ $invoice_options = get_option( 'eShopInvoice_options' );
 include('../../../eshop/eshop-admin-functions.php');
 
 
+global $eshopoptions;
 
 
 $dtable=$wpdb->prefix.'eshop_orders';
@@ -77,9 +78,9 @@ if(count($myrowres) == 1) {
             $DETAILS .= '<tr>
                 <td style="width: 12%; text-align: left">'.$itemrow->optsets.'</td>
                 <td style="width: 52%; text-align: left">'.$title.'<br>'.$item.'</td>
-                <td style="width: 13%; text-align: right">'.$itemrow->item_amt.'&euro;</td>
+                <td style="width: 13%; text-align: right">'.$itemrow->item_amt.' '.$eshopoptions['currency_symbol'].'</td>
                 <td style="width: 10%">'.$itemrow->item_qty.'</td>
-                <td style="width: 13%; text-align: right;">'.number_format($value, 2, ',', ' ').' &euro;</td>
+                <td style="width: 13%; text-align: right;">'.number_format($value, 2, ',', ' ').' '.$eshopoptions['currency_symbol'].'</td>
             </tr>';
             }
         $x++;
