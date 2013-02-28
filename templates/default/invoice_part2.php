@@ -21,7 +21,9 @@
                         Date: <b><?php echo $DATE; ?></b><br>
                         Order Number: <b><?php echo $TRANSID; ?></b><br>
                     </div>
-                    <img src="<?php echo $invoice_options['company_logo']; ?> alt='logo'">
+                    <?php if ($invoice_options['company_logo'] != "") { ?>
+                        <img src="<?php echo $invoice_options['company_logo']; ?>" alt='logo'>
+                    <?php } ?>
                     <h1><?php echo $TITLE;?></h1>
                     &nbsp;&nbsp;&nbsp;&nbsp;<b>Option: <?php echo $item; ?></b><?php echo $optsets; ?><br>
                 </div>

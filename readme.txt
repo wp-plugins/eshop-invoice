@@ -8,9 +8,9 @@ Tags: eshop, ecommerce, shop, store, estore, stock control, cart, e-commerce, mu
 
 Requires at least: 3.0
 
-Tested up to: 3.4
+Tested up to: 3.5.1
 
-Stable tag: 0.3.4
+Stable tag: 0.3.5
 
 License: GPLv2 or later
 
@@ -50,6 +50,11 @@ Screenshots available on via [PyPHP.be](http://www.pyphp.be/)
 
 
 == Changelog == 
+
+Version 0.3.5
+
+* bugfix in default template, thanks to Karsonito
+
 
 Version 0.3.4
 
