@@ -51,6 +51,10 @@ Screenshots available on via [PyPHP.be](http://www.pyphp.be/)
 
 == Changelog == 
 
+Version 0.3.6
+
+* popping version number
+
 Version 0.3.5
 
 * bugfix in default template, thanks to Karsonito
