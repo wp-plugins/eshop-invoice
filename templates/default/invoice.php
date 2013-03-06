@@ -1,13 +1,15 @@
 <?php
-
+$parse_uri = explode( 'wp-content', $_SERVER['SCRIPT_FILENAME'] );
+require_once( $parse_uri[0] . 'wp-load.php' );
+define('WP_USE_THEMES',false);
+ob_clean();
 ob_start();
-define('WP_USE_THEMES', false);
-require('../../../../../wp-load.php' );
+
 $current_user = wp_get_current_user();
 $uid = $current_user->ID;
 
 $TRANSID = $_GET['invoice'];
-if(isset($_GET['admin_override']) and current_user_can('administrator') ) {
+if(isset($_GET['admin_override']) and current_user_can('edit_pages') ) {
     $ADMIN_OVERRIDE = $_GET['admin_override'];
     }
 else {
@@ -124,6 +126,18 @@ if(count($myrowres) == 1) {
     $html2pdf->pdf->SetDisplayMode('fullpage');
     $html2pdf->writeHTML($content);
     $html2pdf->Output($invoice_options['status_'.$status.'_title']."-".$TRANSID.".pdf",'D');        
-    };
+    }
+    else {
+        require_once('../../html2pdf/html2pdf.class.php');
+        ?>
+        You are not allowed to see this invoice, sorry
+        <?php
+        $content = ob_get_contents();
+        ob_end_clean();
+        $html2pdf = new HTML2PDF('P', 'A4', 'fr',true,'UTF-8');
+        $html2pdf->pdf->SetDisplayMode('fullpage');
+        $html2pdf->writeHTML($content);
+        $html2pdf->Output('sorry.pdf','D');        
+    }
 
 ?>

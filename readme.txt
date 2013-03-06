@@ -10,7 +10,7 @@ Requires at least: 3.0
 
 Tested up to: 3.5.1
 
-Stable tag: 0.3.6
+Stable tag: 0.4
 
 License: GPLv2 or later
 
@@ -50,6 +50,11 @@ Screenshots available on via [PyPHP.be](http://www.pyphp.be/)
 
 
 == Changelog == 
+
+Verison 0.4
+
+* corrected security breach. you are really advised to upgrade to this version. Remember to update your templates!
+* changed a little the beginning of invoice.php, shoudl avoid blank pages or "?" characters being output
 
 Version 0.3.6
 
